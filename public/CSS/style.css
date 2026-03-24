@@ -5,11 +5,66 @@
 body {
   font-family: Tahoma, arial;
 }
+.overlay {
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  min-height: 70%;
+  padding: 20px;
+  background-color:#009688;
+}
+
+.overlay-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ffeb3b;
+}
+
+.overlay-description {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.overlay-rules {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffeb3b;
+}
+
+.overlay-rules-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.overlay-start-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #e91e63;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+.overlay-start-btn:hover {
+  background-color: #c2185b;
+  transform: translateX(-50%) scale(1.05);
+}
+
 
 .container {
   margin: 20px auto;
   width: 90%;
-  max-width: 1000px;
+  max-width: 1500px;
 }
 
 .row {
@@ -301,9 +356,31 @@ hr {
 }
 
 @media (max-width: 1024px) {
+  .overlay {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+    /* bottom: -18px; */
+  }
+  .overlay-title {
+    font-size: 28px;
+  }
+  .overlay-description {
+    font-size: 16px;
+  }
+  .overlay-rules {
+    font-size: 20px;
+  }
+  .overlay-rules-list {
+    font-size: 16px;
+  }
+  .overlay-start-btn {
+    font-size: 20px;
+    padding: 15px 25px;
+  }
   .container {
     width: 95%;
-    height: 500px;
+    height: auto;
   }
 
   .row {
@@ -315,10 +392,34 @@ hr {
 
   .hangman-draw {
     width: 90%;
+    min-height: 300px;
   }
 }
 
 @media (max-width: 768px) {
+  .overlay {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    z-index: 1000;
+  }
+  .overlay-title {
+    font-size: 24px;
+  }
+  .overlay-description {
+    font-size: 14px;
+  }
+  .overlay-rules {
+    font-size: 18px;
+  }
+  .overlay-rules-list {
+    font-size: 14px;
+  }
+  .overlay-start-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
   .container {
     position: relative;
   }
@@ -331,6 +432,7 @@ hr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 120px;
   }
   .game-info {
     font-size: 14px;
@@ -338,29 +440,52 @@ hr {
     gap: 10px;
   }
   .popup {
-    width: 60%;
-    font-size: 28px;
-    padding-top: 20px;
+    width: 80%;
+    left: 10%;
+    font-size: 30px;
+    padding: 60px 10px;
   }
 
   .popup .but {
     font-size: 20px;
   }
-  .letters-guess{
+  .letters-guess {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     margin: 0 auto;
+    max-height: 120px;
   }
-  hr{
+  hr {
     width: 100%;
     position: absolute;
-    bottom: -50%;
+    bottom: auto;
   }
 }
 
 @media (max-width: 480px) {
+  .overlay {
+    width: 100%;
+    /* height: auto; */
+    padding: 20px;
+  }
+  .overlay-title {
+    font-size: 20px;
+  }
+  .overlay-description {
+    font-size: 12px;
+  }
+  .overlay-rules {
+    font-size: 16px;
+  }
+  .overlay-rules-list {
+    font-size: 12px;
+  }
+  .overlay-start-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
   .row {
     flex-direction: column;
     gap: 20px;
@@ -378,5 +503,4 @@ hr {
     font-size: 16px;
     line-height: 40px;
   }
-
 }

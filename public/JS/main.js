@@ -1,3 +1,14 @@
+// Start of the game Button
+const startBtn = document.getElementById("start-btn");
+startBtn.addEventListener("click", () => {
+  startBtn.parentElement.style.display = "none";
+  localStorage.setItem("gameStarted", "true");
+});
+// Check if the game has already started
+if (localStorage.getItem("gameStarted") === "true") {
+  document.querySelector(".overlay").style.display = "none";
+}
+
 // Generate alphabet letters
 const letters = "abcdefghijklmnopqrstuvwxyz";
 const lettersArray = Array.from(letters);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,10 +8,37 @@
   </head>
 
   <body>
+    <div class="overlay">
+      <h1 class="overlay-title">Hangman Game - How to Play</h1>
+      <p class="overlay-description">
+        Welcome to the Hangman Game! The objective of the game is to guess the
+        hidden word by suggesting letters one at a time. Each incorrect guess
+        will bring you closer to being "hanged." You have a limited number of
+        incorrect guesses before the game is over. Good luck, and have fun
+        playing!
+      </p>
+      <p class="overlay-rules">Rules:</p>
+      <ul class="overlay-rules-list">
+        <li>A word will be randomly selected.</li>
+        <li>You guess one letter at a time.</li>
+        <li>Correct letters appear in the word.</li>
+        <li>Wrong guesses add a part to the hangman.</li>
+        <li>
+          If the hangman is fully drawn before you guess the word, you lose.
+        </li>
+        <li>Try to guess the word with as few mistakes as possible!</li>
+      </ul>
+      <button
+        id="start-btn"
+        class="overlay-start-btn"
+      >
+        Start Game
+      </button>
+    </div>
     <div class="container">
       <div class="game-info">
-        <div class="game-name">Hangman</div>
-        <div class="category">Word From: <span></span></div>
+        <div class="game-name">Hangman Game</div>
+        <div class="category">Category: <span></span></div>
       </div>
       <hr />
       <div class="row">
